@@ -1,0 +1,197 @@
+
+Topics:
+
+  npm libraries --> JS codes readily available to use in some other JS projects.
+
+    like a library store for JS Development
+
+  Creation of  Npm Project:
+    1. Create a folder
+    2. Open the Terminal or CMD in the folder
+    3. npm init
+
+  package.json --> file which gives very useful information about the npm project & libraries used from npmjs
+
+  package-lock.json --> file which keeps track of the packages installed and their dependencies
+
+  check a health of a particular package
+
+  node_modules --> js file & function used by the project install from npm ( should not be pushed to github )
+
+    Eg: lodash --> utility functions for js
+  Node_modules: pre-written js codes to be included/imported in a project
+
+  React:
+    what is react?
+      front-end js library for manipulating DOM and producing contents using jsx ( javascript extensible )
+
+      inturn producing single page applications
+
+      advantage is VDOM in processing changes to the DOM faster
+      using VDOM reconciliation
+
+  Multi Page App:
+    https://retail.onlinesbi.sbi/personal/ --> multiple pages ( html ) loading 
+    A multiple refresh/interaction everytime will download common html codes/assets during interaction.
+    which leads lots of request and data consumtption and not being smooth
+
+  Single Page Application:
+
+    one single html with a js integrated, js controls the contents of the page
+
+    SPA, loads only the specific contents which needs changes and makes requests/assets call calls only for the specific region of the site
+
+  React Setup:
+    
+    Documentation for react https://react.dev/
+
+    Framework vs library:
+      Framework - complete set of tools & libraries to create website/application
+        Eg: NextJs, Vite, AngularJS( Shadow DOM ), Remix etc..
+
+      Library:
+        simple JS codes which helps a framework build websites/application
+        Eg: React, d3, dataframes( large data manipulation,) & axios
+
+    We are going to use Vite Framework for creating react setup
+
+    Setup for React project:
+      0. select the location/dir for the project
+      1. npm create vite@latest
+          create cmd used for running a framework ( vite etc.., )
+      2. enter project name
+      3. select framework react
+      4. select variant javascript
+      5. Follow the instructions on the screen
+        1. cd <project-name>
+        2. npm install
+        3. npm run dev
+      6. Open VSCode -> Open the folder of the project created by vite
+
+    devDependencies:
+      are the libraries which won't be used inside codebase
+      rather used only for the development process
+        1. Local Server Setup
+        2. Build the project
+        3. Testing the Project
+
+  React: Complete Documentation ---> https://react.dev/
+    Structure of React & Folder Structure
+
+      eslint --> provides the rules and regulations for writing react/js codes
+        eslintrc -> eslint configuration
+      
+      vite - framework for creating react project
+        vite.config.js --> vite configurations
+    Making Your Sight Public for EveryOne,
+      Deployment to Netlify:
+        1. add new site
+        2. Connect to github
+        3. Select the repo
+        4. Scroll **without changing any settings** and click deploy site
+    
+    readme.md --> used for documenting Your repository codebase
+
+ 
+Task:
+
+  1. Create a react project using vite
+  
+  2. Change the JSX in src/App.jsx by adding Your 
+    name & batch as a new variable and using it in the html of App.jsx
+
+  2. Deploy the site to netlify
+
+  3. Be ready with netlify link on coming saturday
+
+  There is task in zen portal which we have not dicussed. 
+  ** You can start it from Next Week. **
+  ** DO NOT WORRY ABOUT LATE SUBMISSION **
+
+Next Session:
+
+  jsx --> javascript xml, which permitts to write html elements inside js file
+
+    react is the library which allows JSX syntax
+      className instead of class ( class is a keyword in js )
+      class is a keyword for creating blueprints of user defined object
+      because of which we need to use className instead of class in jsx syntax
+    empty fragement --> <></>
+    expressions or varaibles can be used in curly braces
+
+    import/export
+
+      normal import/export using curly braces/ * as utils
+
+      default import/export
+
+    Virtual DOM:
+      Real DOM: Tree like structure 
+        html 
+          head
+            title
+            script
+            icon
+          body
+            div
+            h1
+            a
+            p
+
+      Virtual DOM: it is an ** In Memory Copy of the real DOM ** used while manipulating the DOM.
+
+      React  SPA:
+      Virtual DOM
+        The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM.
+
+      Advantage: reconciliation process
+
+        where the changes happens only in the virtual DOM which will be compared with old virtual DOM. And if any difference is found it will affected in the Real DOM. 
+
+        No diff changes, Only memory/Virtual DOM changes not the real DOM
+
+    Script:
+      dev, build, test
+
+  webpack & babeljs conversion
+
+  props:
+    attributes passed for a component is called as prop
+    which can be used inside the props / destructured at component level
+
+  Components (simple HTML layout to reusable react components)
+
+  props: 
+    the essential information needed to create a component for displaying the information
+
+    proptypes:
+      specifying the type of the props values needed to create a component
+      this helps in reducing unwanted errors because of typeerror
+
+    1. Working with array lists
+        List Rendering 
+    
+    3. Styles and Module styles
+      inline style --> using it as object
+      HTML Inline
+      <img src='https://image.com/image.png' style="height: 200px; width: 100px" />
+      React Inline
+      <img src={props.imageUrl} style={{ height: '200px', width: '100px' }} />
+
+      External Styling:
+        normal styling using .css
+        module styling using .module.css
+          import styles from './movie.module.css';
+          module styling only classNames and tags are allowed
+
+    Conditional rendering
+    Handling Events
+    state
+
+    Usage of keys:
+      key props for a component is used to identify the element uniquely by VDOM
+      Do not use array index for key in component that will lead to confusion during interactions
+
+    
+  
+
